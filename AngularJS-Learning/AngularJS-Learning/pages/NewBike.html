@@ -1,0 +1,59 @@
+﻿<p>Add New Bike</p>
+<br />
+<form class="form-horizontal" ng-submit="submitStudnetForm()" role="form">
+    <div class="form-group">
+        <label for="maker" class="col-sm-3 control-label">Make</label>
+        <div class="col-sm-6">
+            <input type="text" id="maker" class="form-control" ng-model="maker" />
+        </div>
+        <div class="col-sm-3"></div>
+
+    </div>
+    <div class="form-group">
+        <label for="model" class="col-sm-3 control-label">Model</label>
+        <div class="col-sm-6">
+            <input type="text" id="model" class="form-control" ng-model="model" />
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="engine" class="col-sm-3 control-label">Engine</label>
+        <div class="col-sm-6">
+            <input type="text" id="engine" class="form-control" ng-model="engine" />
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    
+    <div class="form-group">
+        <label for="carType" class="col-sm-3 control-label">Bike Type</label>
+        <div class="col-sm-2">
+       
+            <select class="form-control" name="carType" ng-model="carType">
+                <option value="">Select Bike Type</option>
+                <option ng-repeat="car in carTypes" value="{{car.Id}}">{{car.Name}}</option>
+            </select>  
+
+        </div>
+        <div class="col-sm-7"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2">
+            <span><b>No of Wheels</b></span>
+            <div class="radio">
+                <label><input value=2" type="radio" name="wheels" ng-model="noOfWheels" />2</label>
+            </div>
+            <div class="radio">
+                <label><input value="3" type="radio" name="wheels" ng-model="noOfWheels" />3</label>
+            </div>
+        </div>
+     
+    </div>
+
+    <input type="submit" ng-click="PostData()" value="Save" class="btn btn-primary col-sm-offset-3" />
+    <input type="submit" ng-click="Cancel()" value="Cancel" />
+    <!--<input type="reset" value="Reset" ng-click="resetForm()" />-->
+</form>

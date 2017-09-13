@@ -1,0 +1,56 @@
+﻿<!-- home.html -->
+<style>
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<div >
+    <div id="tblVehicle" ng-controller="mainController">
+        <table>
+            <tr>
+                <th>Vehicle Type</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Doors</th>
+                <th>Wheels</th>
+                <th>Car Type</th>
+                <th>Bike Type</th>
+
+
+                <!--<th>ID</th>
+                <th>Email ID ( Double click to update)</th>
+                <th>Subscribed Date</th>-->
+                <th></th>
+            </tr>
+            <tbody ng-repeat="data in VehiclesData">
+                <tr>
+                    <td>{{data.VehicleType}}</td>
+                    <td >{{data.Make}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Edit" value="Edit"  /></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<div class="form-group">
+            <div>
+                <label for="email">Add New Car</label>
+            </div>
+            <div>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" [required="string" ] data-ng-model="mailid" />
+            </div>
+        </div>
+        <button type="button" class="btn btn-default" data-ng-click="saveSubs();">Submit</button>-->
+    
+    </div>
+    <input type="submit" ng-click="AddNewCar()" value="Add New Car" class="btn btn-primary" />
+
+    <input type="submit" ng-click="AddNewBike()" value="Add New Bike" class="btn btn-primary" />
+</div>
